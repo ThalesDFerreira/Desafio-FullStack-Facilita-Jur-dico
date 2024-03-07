@@ -23,18 +23,14 @@ const bodyClientsValidation = async (req, res, next) => {
       .json({ message: `Body não possui a chave "phone" ou está vazia!` });
   }
   if (!req.body.coordinate_x) {
-    return res
-      .status(status.BAD_REQUEST)
-      .json({
-        message: `Body não possui a chave "coordinate_x" ou está vazia!`,
-      });
+    return res.status(status.BAD_REQUEST).json({
+      message: `Body não possui a chave "coordinate_x" ou está vazia!`,
+    });
   }
   if (!req.body.coordinate_y) {
-    return res
-      .status(status.BAD_REQUEST)
-      .json({
-        message: `Body não possui a chave "coordinate_y" ou está vazia!`,
-      });
+    return res.status(status.BAD_REQUEST).json({
+      message: `Body não possui a chave "coordinate_y" ou está vazia!`,
+    });
   }
   next();
 };

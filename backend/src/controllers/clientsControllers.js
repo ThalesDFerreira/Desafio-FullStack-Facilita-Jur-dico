@@ -53,7 +53,8 @@ const editClientsControllers = async (req, res) => {
       findClient.dataValues.coordinate_y === req.body.coordinate_y
     ) {
       return res.status(status.CONFLICT).json({
-        message: 'Nome, email, phone, coordinate_x e coordinate_y não alterados!',
+        message:
+          'Nome, email, phone, coordinate_x e coordinate_y não alterados!',
       });
     } else {
       await editClientsServices(req);

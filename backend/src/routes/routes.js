@@ -2,9 +2,7 @@ const router = require('express').Router();
 const express = require('express');
 const status = require('http-status');
 
-const {
-  bodyClientsValidation,
-} = require('../middlewares/validations');
+const { bodyClientsValidation } = require('../middlewares/validations');
 
 const {
   getClientsControllers,
@@ -12,7 +10,6 @@ const {
   editClientsControllers,
   deleteClientsControllers,
 } = require('../controllers/clientsControllers');
-
 
 router.get('/', (req, res) => {
   try {
@@ -28,7 +25,7 @@ router.get('/', (req, res) => {
 
 // CLIENTES
 router.get('/clientes', getClientsControllers);
-router.post('/clientes', bodyClientsValidation,  insertClientsControllers);
+router.post('/clientes', bodyClientsValidation, insertClientsControllers);
 router.put('/clientes', bodyClientsValidation, editClientsControllers);
 router.delete('/clientes', deleteClientsControllers);
 
