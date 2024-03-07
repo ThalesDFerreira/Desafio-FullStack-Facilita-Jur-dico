@@ -2,10 +2,9 @@ const router = require('express').Router();
 const express = require('express');
 const status = require('http-status');
 
-// const {
-//   bodyUsersValidation,
-//   bodyEditUsersValidation,
-// } = require('../middlewares/validations');
+const {
+  bodyClientsValidation,
+} = require('../middlewares/validations');
 
 const {
   getClientsControllers,
@@ -27,10 +26,10 @@ router.get('/', (req, res) => {
   }
 });
 
-// USUARIOS
-router.get('/usuarios', getClientsControllers);
-router.post('/usuarios', insertClientsControllers);
-router.put('/usuarios', editClientsControllers);
-router.delete('/usuarios', deleteClientsControllers);
+// CLIENTES
+router.get('/clientes', getClientsControllers);
+router.post('/clientes', bodyClientsValidation,  insertClientsControllers);
+router.put('/clientes', bodyClientsValidation, editClientsControllers);
+router.delete('/clientes', deleteClientsControllers);
 
 module.exports = router;
