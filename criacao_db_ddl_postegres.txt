@@ -1,0 +1,8 @@
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255),
+    telefone BIGINT,
+    coordenada_x INT,
+    coordenada_y INT
+);
