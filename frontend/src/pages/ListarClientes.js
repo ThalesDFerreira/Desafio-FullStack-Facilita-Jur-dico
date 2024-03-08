@@ -154,7 +154,9 @@ const ListarClientes = () => {
 
   const btnRequestDeleteClient = async () => {
     try {
-      const result = await requestDelete(`/clientes?id=${clienteSelecionadoDeletar}`);
+      const result = await requestDelete(
+        `/clientes?id=${clienteSelecionadoDeletar}`
+      );
       getClients();
       toast.success(result.message);
       handleCloseModalDelete();

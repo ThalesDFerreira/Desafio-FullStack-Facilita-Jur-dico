@@ -1,7 +1,10 @@
+import Header from '../components/Header';
+
 const VisitarClientes = () => {
   return (
-    <div>
-      <h1>Visitar Clientes</h1>
+    <div className='flex flex-col min-h-screen'>
+      <Header />
+      <main className='p-2 flex-grow bg-rgb-azul-claro'></main>
     </div>
   );
 };
