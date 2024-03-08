@@ -1,3 +1,7 @@
+
+![Sem título](https://github.com/ThalesDFerreira/Desafio-FullStack-Facilita-Jur-dico/assets/99926224/a92b15cd-e809-4d63-8cd1-084bd56aef29)
+
+
 ANTES DAS CONFIGURAÇÕES INICIAIS
 
 Projeto FlullStack realizado mediante desafio técnico, onde gerencia cadastro de clientes cadastrando, editando e deletando clientes, bem como listando e filtrando os clientes. Como parte importante desse projeto foi feito na API uma forma otimizada de visitar esses clientes por meio de um plano cartesiano.
