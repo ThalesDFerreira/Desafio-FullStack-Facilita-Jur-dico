@@ -18,6 +18,8 @@ const CadastroClientes = () => {
 
       if (!validateEmail) {
         toast.error('⚠️ E-mail inválido!');
+      } else if (telefone.length > 11) {
+        toast.error('⚠️ Número de telefone não pode ter mais que 11 dígitos!');
       } else {
         const result = await requestPost('/clientes', {
           name: nome,
