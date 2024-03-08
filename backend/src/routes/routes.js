@@ -11,6 +11,10 @@ const {
   deleteClientsControllers,
 } = require('../controllers/clientsControllers');
 
+const {
+  routeClientsControllers,
+} = require('../controllers/routeControllers');
+
 router.get('/', (req, res) => {
   try {
     return res.status(status.OK).json({
@@ -28,5 +32,8 @@ router.get('/clientes', getClientsControllers);
 router.post('/clientes', bodyClientsValidation, insertClientsControllers);
 router.put('/clientes', bodyClientsValidation, editClientsControllers);
 router.delete('/clientes', deleteClientsControllers);
+
+// VISITAÇÃO
+router.post('/vistar', routeClientsControllers);
 
 module.exports = router;
